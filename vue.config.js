@@ -9,7 +9,7 @@ const vueConfig = {
   // 页面模块
   pages: {
     community: {
-      entry: 'src/modules/community/main.js',
+      entry: 'src/modules/mall/main.js',
       template: 'public/index.html',
       filename: 'index.html',
       // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
@@ -18,13 +18,20 @@ const vueConfig = {
       // 提取出来的通用 chunk 和 vendor chunk。
       // chunks: ['chunk-vendors', 'chunk-common', 'index']
     },
-    user: {
-      entry: 'src/modules/user/main.js',
-      template: 'public/index.html',
-      filename: 'user.html',
-      // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-      title: 'user Page',
-    }
+    // community: {
+    //   entry: 'src/modules/community/main.js',
+    //   template: 'public/index.html',
+    //   filename: 'community.html',
+    //   // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
+    //   title: 'Index Page',
+    // },
+    // user: {
+    //   entry: 'src/modules/user/main.js',
+    //   template: 'public/index.html',
+    //   filename: 'user.html',
+    //   // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
+    //   title: 'user Page',
+    // }
   },
 
   // 项目部署路径
