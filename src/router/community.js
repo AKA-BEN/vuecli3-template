@@ -5,22 +5,23 @@ import Guard from './guard'
 Vue.use(Router)
 
 const router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'index',
       meta: {
         title: '我的首页'
       },
-      component: () => import('@/views/home/home.vue')
+      component: () => import('@/modules/community/index/index.vue')
     },
     {
-      path: '/about',
-      name: 'about',
+      path: '/demo',
+      name: 'demo',
       meta: {
-        title: '关于'
+        title: 'demo'
       },
-      component: () => import('@/views/about/about.vue')
+      component: () => import('@/modules/community/demo/demo.vue')
     }
   ]
 })

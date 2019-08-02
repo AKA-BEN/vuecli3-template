@@ -5,8 +5,30 @@ const ISDEV = process.env.NODE_ENV === 'development'
 const resolve = dir => path.join(__dirname, dir)
 
 const vueConfig = {
+
+  // 页面模块
+  pages: {
+    community: {
+      entry: 'src/modules/community/main.js',
+      template: 'public/index.html',
+      filename: 'index.html',
+      // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
+      title: 'Index Page',
+      // 在这个页面中包含的块，默认情况下会包含
+      // 提取出来的通用 chunk 和 vendor chunk。
+      // chunks: ['chunk-vendors', 'chunk-common', 'index']
+    },
+    user: {
+      entry: 'src/modules/user/main.js',
+      template: 'public/index.html',
+      filename: 'user.html',
+      // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
+      title: 'user Page',
+    }
+  },
+
   // 项目部署路径
-  publicPath: ISDEV ? '/' : '/prod_path',
+  publicPath: ISDEV ? '/' : '/',
 
   // 生成资源 Hash文件名
   filenameHashing: true,
@@ -25,12 +47,12 @@ const vueConfig = {
       errors: true
     },
     // 服务器代理
-    // proxy: {
-    //   '/api': {
-    //     target: 'http://192.168.1.1:8252/',
-    //     changeOrigin: true
-    //   }
-    // }
+    proxy: {
+      '/api/config/1000003': {
+        target: 'http://datamgr.teshehui.com',
+        changeOrigin: true
+      }
+    }
   },
 
   css: {

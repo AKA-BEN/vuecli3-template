@@ -1,13 +1,13 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>This is an user page</h1>
   </div>
 </template>
 
 <script>
-import './about.less'
+import './index.less'
 
 export default {
-  name: 'about'
+  name: 'user'
 }
 </script>

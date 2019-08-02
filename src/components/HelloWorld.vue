@@ -10,10 +10,16 @@
 </template>
 
 <script>
+// import { getDemo } from '@/api/index'
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  mounted () {
+    // getDemo({ id: 11 }).then((res) => {
+    //   this.getRes = res.msg
+    // })
   },
   methods: {
     add () {

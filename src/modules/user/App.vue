@@ -1,8 +1,14 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <div>
+        页面级：
+        <a href="/">community</a> |
+        <a href="/user.html">user</a>
+      </div>
+      user页面子路由级：
+      <router-link to="/">index</router-link> |
+      <router-link to="/demo">Demo</router-link>
     </div>
     <router-view/>
   </div>
