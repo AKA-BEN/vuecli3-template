@@ -64,6 +64,7 @@ npm run lint        eslint测试
 │  │  │  HelloWorld.vue
 │  │  │  
 │  │  └─layouts                         页面框架类型组件
+│  │     
 │  ├─modules
 │  │  ├─community                       页面模块
 │  │  │  │  App.vue
