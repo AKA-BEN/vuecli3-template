@@ -27,14 +27,13 @@ export default class AxiosBase {
         }
       }
     }
-    this.init()
+    that.createInstance()
+    that.addInterceptor()
   }
 
   // 初始化
   init () {
     const that = this
-    that.createInstance()
-    that.addInterceptor()
     return (
       method = 'get',
       url,
