@@ -27,8 +27,8 @@ export default class AxiosBase {
         }
       }
     }
-    that.createInstance()
-    that.addInterceptor()
+    this.createInstance()
+    this.addInterceptor()
   }
 
   // 初始化
